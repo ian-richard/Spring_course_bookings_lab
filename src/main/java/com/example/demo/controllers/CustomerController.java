@@ -26,7 +26,7 @@ public class CustomerController {
            return new ResponseEntity(customerRepository.findCustomerByBookingsCourseName(courseName), HttpStatus.OK);
        }
        if (town != null && courseName != null){
-           return new ResponseEntity(customerRepository.findCustomerByBookingsCourseTownAndBookingsCourseName(town, courseName), HttpStatus.OK);
+           return new ResponseEntity(customerRepository.findAllCustomersByBookingsCourseTownAndBookingsCourseName(town, courseName), HttpStatus.OK);
        }
        return new ResponseEntity(customerRepository.findAll(), HttpStatus.OK);
    }

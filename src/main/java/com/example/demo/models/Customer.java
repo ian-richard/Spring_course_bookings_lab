@@ -25,8 +25,7 @@ public class Customer {
     private int age;
 
 
-//    @JsonIgnoreProperties({"customer"})
-    @JsonBackReference
+    @JsonIgnoreProperties({"customer"})
     @OneToMany(mappedBy = "customer")
     private List<Booking> bookings;
 
