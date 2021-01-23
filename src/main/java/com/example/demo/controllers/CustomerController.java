@@ -28,6 +28,7 @@ public class CustomerController {
        if (town != null && courseName != null){
            return new ResponseEntity(customerRepository.findAllCustomersByBookingsCourseTownAndBookingsCourseName(town, courseName), HttpStatus.OK);
        }
+       // http://localhost:8080/customers?town=London&courseName=Python
        return new ResponseEntity(customerRepository.findAll(), HttpStatus.OK);
    }
 
